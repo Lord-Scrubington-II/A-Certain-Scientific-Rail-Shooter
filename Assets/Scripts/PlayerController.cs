@@ -4,29 +4,34 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
-public class Player : MonoBehaviour
-{
+public class PlayerController : MonoBehaviour
+{   
+    [Header("General")]
     [Tooltip("In ms^-1")] [SerializeField] float xSpeed = 6f;
     [Tooltip("In ms^-1")] [SerializeField] float ySpeed = 6f;
     [Tooltip("In metres")] [SerializeField] float xDispMax = 5f;
     [Tooltip("In metres")] [SerializeField] float yDispMax = 4f;
+
+    [Header("Screen Position Params")]
     [SerializeField] float positionPitchFactor = -5f;
+    [SerializeField] float positionYawFactor = 5f;
+
+    [Header("Control-Throw Params")]
     [SerializeField] float controlPitchFactor = -5f;
     [SerializeField] float controlRollFactor = -5f;
-    [SerializeField] float positionYawFactor = 5f;
-    static float xThrow, yThrow;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    static float xThrow, yThrow;
+    bool controlsFrozen = false;
 
     // Update is called once per frame
     void Update()
     {
-        HandleTransform();
-        HandleRotation();
+        if (!controlsFrozen)
+        {
+            HandleTransform();
+            HandleRotation();
+        }
+        
     }
 
     private void HandleRotation()
@@ -72,4 +77,11 @@ public class Player : MonoBehaviour
         float actualXTransform = Mathf.Clamp(rawXTransform, -xDispMax, xDispMax);
         return actualXTransform;
     }
+
+    private void OnPlayerDeath()
+    {
+        print("Controls Frozen");
+        controlsFrozen = false;
+    }
+
 }
