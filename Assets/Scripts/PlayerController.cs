@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviour
     [Tooltip("In ms^-1")] [SerializeField] float ySpeed = 6f;
     [Tooltip("In metres")] [SerializeField] float xDispMax = 5f;
     [Tooltip("In metres")] [SerializeField] float yDispMax = 4f;
+    [SerializeField] private GameObject[] guns;
 
     [Header("Screen Position Params")]
     [SerializeField] float positionPitchFactor = -5f;
@@ -21,7 +22,26 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float controlRollFactor = -5f;
 
     static float xThrow, yThrow;
+    static bool firing;
+    private List<ParticleSystem> bullets = new List<ParticleSystem>();
+
     bool controlsFrozen = false;
+
+    // Start is called before the first frame update
+
+    void Start()
+    {
+        CacheGuns();
+    }
+
+    private void CacheGuns()
+    {
+        foreach (GameObject gun in guns)
+        {
+            ParticleSystem bullet = gun.GetComponent<ParticleSystem>();
+            bullets.Add(bullet);
+        }
+    }
 
     // Update is called once per frame
     void Update()
@@ -30,8 +50,19 @@ public class PlayerController : MonoBehaviour
         {
             HandleTransform();
             HandleRotation();
+            HandleGuns();
         }
         
+    }
+
+    private void HandleGuns()
+    {
+        firing = CrossPlatformInputManager.GetButton("Fire");
+        foreach(ParticleSystem bullet in bullets)
+        {
+            var emissionModule = bullet.emission;
+            emissionModule.enabled = firing;
+        }
     }
 
     private void HandleRotation()
