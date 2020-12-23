@@ -7,7 +7,9 @@ public class Enemy : MonoBehaviour
     private string thisName;
     [SerializeField] GameObject deathFX;
     [SerializeField] Transform parent;
-    [SerializeField] int pointsPerHit = 50;
+    [SerializeField] int pointsPerKill = 50;
+    [SerializeField] int pointsPerHit = 5;
+    [SerializeField] int hp = 5;
 
     private ScoreBoard scoreBoard;
 
@@ -35,12 +37,22 @@ public class Enemy : MonoBehaviour
     {
         print("Particles Collided with " + thisName);
 
+        scoreBoard.ScoreUpdate(pointsPerHit);
+
+        hp--;
+        if(hp <= 0){
+            Kill();
+        }
+    }
+
+    private void Kill()
+    {
         //render explosion effects
         GameObject fx = Instantiate(deathFX, transform.position, Quaternion.identity);
         fx.transform.parent = parent;
 
         //make the scoreboard update points
-        scoreBoard.ScoreUpdate(this.pointsPerHit);
+        scoreBoard.ScoreUpdate(this.pointsPerKill);
 
         //bye bye
         Destroy(gameObject);

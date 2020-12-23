@@ -361,6 +361,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e14d375f5a36551479fc2f172353b1ba, type: 3}
+--- !u!1 &366743228 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3363860443291649965, guid: a027f88a1d973e749aa31e700297e256, type: 3}
+  m_PrefabInstance: {fileID: 2278095408121526836}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &407478610 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1469320689751860, guid: a19af03b7c64771489f010af565cc649, type: 3}
@@ -1240,6 +1245,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4354848751893472, guid: bf374732b0ea2c34daa340dc2de7f746, type: 3}
   m_PrefabInstance: {fileID: 1239012979}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1282228405 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2278095408686037500, guid: a027f88a1d973e749aa31e700297e256, type: 3}
+  m_PrefabInstance: {fileID: 2278095408121526836}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1343977752
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1833,7 +1843,7 @@ GameObject:
   - component: {fileID: 2021508739}
   - component: {fileID: 2021508741}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Score Board
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2104,6 +2114,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 947244480, guid: a027f88a1d973e749aa31e700297e256, type: 3}
+      propertyPath: guns.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 947244480, guid: a027f88a1d973e749aa31e700297e256, type: 3}
+      propertyPath: guns.Array.data[0]
+      value: 
+      objectReference: {fileID: 1282228405}
+    - target: {fileID: 947244480, guid: a027f88a1d973e749aa31e700297e256, type: 3}
+      propertyPath: guns.Array.data[1]
+      value: 
+      objectReference: {fileID: 366743228}
     - target: {fileID: 1060220158, guid: a027f88a1d973e749aa31e700297e256, type: 3}
       propertyPath: circuit
       value: 
@@ -2178,11 +2200,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2278095408686037489, guid: a027f88a1d973e749aa31e700297e256, type: 3}
       propertyPath: EmissionModule.enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2278095408686037489, guid: a027f88a1d973e749aa31e700297e256, type: 3}
       propertyPath: playOnAwake
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278095408686037500, guid: a027f88a1d973e749aa31e700297e256, type: 3}
+      propertyPath: m_Name
+      value: Left Gun
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278095408686037500, guid: a027f88a1d973e749aa31e700297e256, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278095408686037503, guid: a027f88a1d973e749aa31e700297e256, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.63
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278095408686037503, guid: a027f88a1d973e749aa31e700297e256, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.47
+      objectReference: {fileID: 0}
+    - target: {fileID: 2278095408686037503, guid: a027f88a1d973e749aa31e700297e256, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.47
       objectReference: {fileID: 0}
     - target: {fileID: 3363860443291649952, guid: a027f88a1d973e749aa31e700297e256, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
@@ -2190,11 +2232,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3363860443291649952, guid: a027f88a1d973e749aa31e700297e256, type: 3}
       propertyPath: EmissionModule.enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3363860443291649952, guid: a027f88a1d973e749aa31e700297e256, type: 3}
       propertyPath: playOnAwake
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3363860443291649965, guid: a027f88a1d973e749aa31e700297e256, type: 3}
+      propertyPath: m_Name
+      value: Right Gun
+      objectReference: {fileID: 0}
+    - target: {fileID: 3363860443291649965, guid: a027f88a1d973e749aa31e700297e256, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3363860443291649966, guid: a027f88a1d973e749aa31e700297e256, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.81
+      objectReference: {fileID: 0}
+    - target: {fileID: 3363860443291649966, guid: a027f88a1d973e749aa31e700297e256, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.32
+      objectReference: {fileID: 0}
+    - target: {fileID: 3363860443291649966, guid: a027f88a1d973e749aa31e700297e256, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.56
       objectReference: {fileID: 0}
     - target: {fileID: 4280973193456126088, guid: a027f88a1d973e749aa31e700297e256, type: 3}
       propertyPath: playOnAwake

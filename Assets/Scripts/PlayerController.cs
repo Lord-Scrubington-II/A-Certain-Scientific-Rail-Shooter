@@ -55,16 +55,6 @@ public class PlayerController : MonoBehaviour
         
     }
 
-    private void HandleGuns()
-    {
-        firing = CrossPlatformInputManager.GetButton("Fire");
-        foreach(ParticleSystem bullet in bullets)
-        {
-            var emissionModule = bullet.emission;
-            emissionModule.enabled = firing;
-        }
-    }
-
     private void HandleRotation()
     {
         float pitch, yaw, roll;
@@ -107,6 +97,19 @@ public class PlayerController : MonoBehaviour
         float rawXTransform = transform.localPosition.x + xTransformThisFrame;
         float actualXTransform = Mathf.Clamp(rawXTransform, -xDispMax, xDispMax);
         return actualXTransform;
+    }
+
+    private void HandleGuns()
+    {
+        firing = CrossPlatformInputManager.GetButton("Fire");
+        foreach (GameObject gun in guns)
+        {
+            /*
+            var emissionModule = bullet.emission;
+            emissionModule.enabled = firing;
+            */
+            gun.SetActive(firing);
+        }
     }
 
     private void OnPlayerDeath()
