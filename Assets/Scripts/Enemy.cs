@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour
 {
     private string thisName;
     [SerializeField] GameObject deathFX;
-    [SerializeField] Transform parent;
+    [SerializeField] Transform parentOfFXObj;
     [SerializeField] int pointsPerKill = 50;
     [SerializeField] int pointsPerHit = 5;
     [SerializeField] int hp = 5;
@@ -49,7 +49,7 @@ public class Enemy : MonoBehaviour
     {
         //render explosion effects
         GameObject fx = Instantiate(deathFX, transform.position, Quaternion.identity);
-        fx.transform.parent = parent;
+        fx.transform.parent = parentOfFXObj;
 
         //make the scoreboard update points
         scoreBoard.ScoreUpdate(this.pointsPerKill);
