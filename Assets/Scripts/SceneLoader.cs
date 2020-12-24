@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class SceneLoader : MonoBehaviour
 {
-    [SerializeField] public Button startButton;
+    [SerializeField] internal Button startButton;
 
     // Start is called before the first frame update
     void Start()

@@ -11,7 +11,7 @@ public class CollisionHandler : MonoBehaviour
     [SerializeField] GameObject deathGibs;
     [SerializeField] GameObject jetParticles;
     private float gibIntangibilityTime = 0.1f;
-    private float explosionStrength = 0.5f;
+    private float explosionStrength = 10f;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -27,16 +27,20 @@ public class CollisionHandler : MonoBehaviour
         SendMessageUpwards("OnPlayerDeath");
     }
 
+    //boom
     private void PlayGibs()
     {
         //shut off ship's mesh renderer and collider
-        MeshRenderer shipMesh = gameObject.GetComponentInChildren<MeshRenderer>();
+        MeshRenderer shipMesh = gameObject.GetComponent<MeshRenderer>();
         shipMesh.enabled = false;
         MeshCollider shipCollider = gameObject.GetComponent<MeshCollider>();
         shipCollider.enabled = false;
 
         //disable jet particles
         jetParticles.SetActive(false);
+
+        //find rigid body of player ship
+        Rigidbody playerRB = gameObject.GetComponent<Rigidbody>();
 
         //instantiate gibs, parented to the player ship
         GameObject gibs = Instantiate(deathGibs, gameObject.transform.position, gameObject.transform.rotation);
@@ -50,15 +54,17 @@ public class CollisionHandler : MonoBehaviour
         int findIndex = 0;
         foreach(Rigidbody rigidbody in rigidbodies)
         {
-            Vector3 forceVector = new Vector3(
-                gameObject.transform.position.x - transforms[findIndex].position.x, 
-                gameObject.transform.position.y - transforms[findIndex].position.y, 
-                gameObject.transform.position.z - transforms[findIndex].position.z
+            Vector3 impulseVector = new Vector3(
+                transforms[findIndex].position.x, 
+                transforms[findIndex].position.y, 
+                transforms[findIndex].position.z
             );
-            forceVector *= explosionStrength;
-            findIndex++;
+            impulseVector -= playerRB.centerOfMass;
 
-            rigidbody.velocity += forceVector;
+            impulseVector *= explosionStrength;
+            rigidbody.velocity += impulseVector;
+
+            findIndex++;
         }
 
     }

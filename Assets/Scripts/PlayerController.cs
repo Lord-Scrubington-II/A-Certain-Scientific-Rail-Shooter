@@ -109,10 +109,16 @@ public class PlayerController : MonoBehaviour
         }   
         */
         firing = CrossPlatformInputManager.GetButton("Fire");
+        SetGunsActive(firing);
+        
+    }
+
+    private void SetGunsActive(bool firing)
+    {
         foreach (ParticleSystem bullet in bullets)
         {
             var emissionModule = bullet.emission;
-            emissionModule.enabled = firing;    
+            emissionModule.enabled = firing;
         }
     }
 
@@ -120,6 +126,7 @@ public class PlayerController : MonoBehaviour
     {
         print("Controls Frozen");
         controlsFrozen = true;
+        SetGunsActive(false);
     }
 
 }

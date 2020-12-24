@@ -731,6 +731,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Music Player
       objectReference: {fileID: 0}
+    - target: {fileID: 4581756293608234860, guid: 39eedfc58934f2347b00a03bd3237ba9, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4581756293608234861, guid: 39eedfc58934f2347b00a03bd3237ba9, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4581756293608234862, guid: 39eedfc58934f2347b00a03bd3237ba9, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -775,5 +783,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4581756293608234863, guid: 39eedfc58934f2347b00a03bd3237ba9, type: 3}
+      propertyPath: titleTheme
+      value: 
+      objectReference: {fileID: 8300000, guid: 715429d0afe1d0043a61c5ecae43bf6a, type: 3}
+    - target: {fileID: 4581756293608234863, guid: 39eedfc58934f2347b00a03bd3237ba9, type: 3}
+      propertyPath: gameTheme
+      value: 
+      objectReference: {fileID: 8300000, guid: ab800d2491076fe45bcefcba00d8d9b7, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39eedfc58934f2347b00a03bd3237ba9, type: 3}
