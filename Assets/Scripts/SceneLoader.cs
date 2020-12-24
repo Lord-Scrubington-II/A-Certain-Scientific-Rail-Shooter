@@ -2,13 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class SceneLoader : MonoBehaviour
 {
+    [SerializeField] public Button startButton;
+
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("LoadLevel", 5);
+        //Invoke("LoadLevel", 5);
+        startButton.onClick.AddListener(LoadLevel);
     }
 
     private void LoadLevel()

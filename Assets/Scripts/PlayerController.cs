@@ -119,7 +119,7 @@ public class PlayerController : MonoBehaviour
     private void OnPlayerDeath()
     {
         print("Controls Frozen");
-        controlsFrozen = false;
+        controlsFrozen = true;
     }
 
 }

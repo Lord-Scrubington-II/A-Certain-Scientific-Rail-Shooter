@@ -4641,6 +4641,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7197605669595603073, guid: c353f4214dbb2c642bfba4dd372898eb, type: 3}
   m_PrefabInstance: {fileID: 1272366065}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1288841671 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1383050216, guid: a027f88a1d973e749aa31e700297e256, type: 3}
+  m_PrefabInstance: {fileID: 2278095408121526836}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1302887979
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8136,6 +8141,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Rig
       objectReference: {fileID: 0}
+    - target: {fileID: 4778476089042733846, guid: a027f88a1d973e749aa31e700297e256, type: 3}
+      propertyPath: deathGibs
+      value: 
+      objectReference: {fileID: 6673424392956739888, guid: b2aec135034fbc3449b8018df30a485b, type: 3}
+    - target: {fileID: 4778476089042733846, guid: a027f88a1d973e749aa31e700297e256, type: 3}
+      propertyPath: levelLoadDelay
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4778476089042733846, guid: a027f88a1d973e749aa31e700297e256, type: 3}
+      propertyPath: jetParticles
+      value: 
+      objectReference: {fileID: 1288841671}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a027f88a1d973e749aa31e700297e256, type: 3}
 --- !u!1001 &3135173049689103477
