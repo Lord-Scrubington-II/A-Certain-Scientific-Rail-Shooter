@@ -21,7 +21,7 @@ public class CollisionHandler : MonoBehaviour
         SendMessage("OnPlayerDeath");
     }
 
-    private void ReloadScene() //string referenced
+    private void ReloadScene()
     {
         SceneManager.LoadScene(1);
     }
