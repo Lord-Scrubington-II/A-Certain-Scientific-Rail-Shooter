@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     static float xThrow, yThrow;
     static bool firing;
     private List<ParticleSystem> bullets = new List<ParticleSystem>();
+    AudioSource laserSounds;
 
     bool controlsFrozen = false;
 
@@ -41,6 +42,9 @@ public class PlayerController : MonoBehaviour
             ParticleSystem bullet = gun.GetComponent<ParticleSystem>();
             bullets.Add(bullet);
         }
+
+        //cache audiosource of guns
+        laserSounds = gameObject.GetComponentInChildren<AudioSource>();
     }
 
     // Update is called once per frame
@@ -110,7 +114,19 @@ public class PlayerController : MonoBehaviour
         */
         firing = CrossPlatformInputManager.GetButton("Fire");
         SetGunsActive(firing);
-        
+        SetGunSFXActive(firing);
+    }
+
+    private void SetGunSFXActive(bool firing)
+    {
+        if (firing && !laserSounds.isPlaying) 
+        {
+            laserSounds.Play();
+        }
+        else if (!firing)
+        {
+            laserSounds.Stop();
+        }
     }
 
     private void SetGunsActive(bool firing)
