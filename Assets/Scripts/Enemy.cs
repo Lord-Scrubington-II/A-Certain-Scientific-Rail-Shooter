@@ -27,6 +27,10 @@ public class Enemy : MonoBehaviour
         
     }
 
+    /**
+     * func: AddNonTriggerBoxCollider()
+     * Guarantee attachment of a box collider at runtime.
+     */
     void AddNonTriggerBoxCollider()
     {
         Collider boxCollider = gameObject.AddComponent<BoxCollider>();
@@ -45,6 +49,10 @@ public class Enemy : MonoBehaviour
         }
     }
 
+    /**
+     * func: Kill()
+     * Kills the enemy by instantiating death fx and destroying itself in memory.
+     */
     private void Kill()
     {
         //render explosion effects

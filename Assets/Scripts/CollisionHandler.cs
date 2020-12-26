@@ -10,8 +10,8 @@ public class CollisionHandler : MonoBehaviour
     [Tooltip("Explosion Prefab")][SerializeField] GameObject deathFx;
     [SerializeField] GameObject deathGibs;
     [SerializeField] GameObject jetParticles;
-    private float gibIntangibilityTime = 0.1f;
-    private float explosionStrength = 10f;
+    private readonly float gibIntangibilityTime = 0.1f;
+    private readonly float explosionStrength = 10f;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -28,6 +28,12 @@ public class CollisionHandler : MonoBehaviour
     }
 
     //boom
+    /**
+     * func: PlayGibs
+     * Partial invocation of the visual death sequence.
+     * The game instantiates a set of gibs while deactivating the player's original model,
+     * then applies an impulse to each gib via its rigid body. 
+     */
     private void PlayGibs()
     {
         //shut off ship's mesh renderer and collider
