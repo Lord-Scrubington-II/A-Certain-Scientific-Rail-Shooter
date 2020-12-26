@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
         }
 
         //cache audiosource of guns
-        laserSounds = gameObject.GetComponentInChildren<AudioSource>();
+        laserSounds = gameObject.GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -114,20 +114,8 @@ public class PlayerController : MonoBehaviour
         */
         firing = CrossPlatformInputManager.GetButton("Fire");
         SetGunsActive(firing);
-        SetGunSFXActive(firing);
     }
 
-    private void SetGunSFXActive(bool firing)
-    {
-        if (firing && !laserSounds.isPlaying) 
-        {
-            laserSounds.Play();
-        }
-        else if (!firing)
-        {
-            laserSounds.Stop();
-        }
-    }
 
     private void SetGunsActive(bool firing)
     {
@@ -135,6 +123,15 @@ public class PlayerController : MonoBehaviour
         {
             var emissionModule = bullet.emission;
             emissionModule.enabled = firing;
+        }
+
+        if (firing && !laserSounds.isPlaying)
+        {
+            laserSounds.Play();
+        }
+        else if (!firing)
+        {
+            laserSounds.Stop();
         }
     }
 

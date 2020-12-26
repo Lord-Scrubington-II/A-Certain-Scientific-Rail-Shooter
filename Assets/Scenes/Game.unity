@@ -250,7 +250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathFX: {fileID: 6558697423143517893, guid: fcf4768ec03b2764fa3ccd08d6991953, type: 3}
-  parentOfFXObj: {fileID: 1466638406}
+  parentOfFXObj: {fileID: 0}
   pointsPerKill: 50
   pointsPerHit: 10
   hp: 3
@@ -435,7 +435,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathFX: {fileID: 6558697423143517893, guid: fcf4768ec03b2764fa3ccd08d6991953, type: 3}
-  parentOfFXObj: {fileID: 1466638406}
+  parentOfFXObj: {fileID: 0}
   pointsPerKill: 50
   pointsPerHit: 10
   hp: 3
@@ -600,7 +600,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathFX: {fileID: 6558697423143517893, guid: fcf4768ec03b2764fa3ccd08d6991953, type: 3}
-  parentOfFXObj: {fileID: 1466638406}
+  parentOfFXObj: {fileID: 0}
   pointsPerKill: 50
   pointsPerHit: 10
   hp: 3
@@ -863,7 +863,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathFX: {fileID: 6558697423143517893, guid: fcf4768ec03b2764fa3ccd08d6991953, type: 3}
-  parentOfFXObj: {fileID: 1466638406}
+  parentOfFXObj: {fileID: 0}
   pointsPerKill: 50
   pointsPerHit: 10
   hp: 3
@@ -1127,7 +1127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathFX: {fileID: 6558697423143517893, guid: fcf4768ec03b2764fa3ccd08d6991953, type: 3}
-  parentOfFXObj: {fileID: 1466638406}
+  parentOfFXObj: {fileID: 0}
   pointsPerKill: 50
   pointsPerHit: 10
   hp: 3
@@ -2062,7 +2062,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathFX: {fileID: 6558697423143517893, guid: fcf4768ec03b2764fa3ccd08d6991953, type: 3}
-  parentOfFXObj: {fileID: 1466638406}
+  parentOfFXObj: {fileID: 0}
   pointsPerKill: 50
   pointsPerHit: 10
   hp: 3
@@ -2987,31 +2987,31 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 103061315045575312, guid: dbef0551e4f29d44aa754550e516950c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 884.47363
+      value: 885.9
       objectReference: {fileID: 0}
     - target: {fileID: 103061315045575312, guid: dbef0551e4f29d44aa754550e516950c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 31.048758
+      value: 31.36
       objectReference: {fileID: 0}
     - target: {fileID: 103061315045575312, guid: dbef0551e4f29d44aa754550e516950c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -470.649
+      value: -468.5
       objectReference: {fileID: 0}
     - target: {fileID: 103061315045575312, guid: dbef0551e4f29d44aa754550e516950c, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.43558872
+      value: 0.41977265
       objectReference: {fileID: 0}
     - target: {fileID: 103061315045575312, guid: dbef0551e4f29d44aa754550e516950c, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.8232582
+      value: 0.8312671
       objectReference: {fileID: 0}
     - target: {fileID: 103061315045575312, guid: dbef0551e4f29d44aa754550e516950c, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.17764187
+      value: 0.14845575
       objectReference: {fileID: 0}
     - target: {fileID: 103061315045575312, guid: dbef0551e4f29d44aa754550e516950c, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.31772915
+      value: 0.33278632
       objectReference: {fileID: 0}
     - target: {fileID: 103061315045575312, guid: dbef0551e4f29d44aa754550e516950c, type: 3}
       propertyPath: m_RootOrder
@@ -3019,15 +3019,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 103061315045575312, guid: dbef0551e4f29d44aa754550e516950c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: -0.899
+      value: 1.867
       objectReference: {fileID: 0}
     - target: {fileID: 103061315045575312, guid: dbef0551e4f29d44aa754550e516950c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 137.313
+      value: 137.292
       objectReference: {fileID: 0}
     - target: {fileID: 103061315045575312, guid: dbef0551e4f29d44aa754550e516950c, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 56.118
+      value: 52.856
       objectReference: {fileID: 0}
     - target: {fileID: 103061315045575312, guid: dbef0551e4f29d44aa754550e516950c, type: 3}
       propertyPath: m_LocalScale.x
@@ -3214,7 +3214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathFX: {fileID: 6558697423143517893, guid: fcf4768ec03b2764fa3ccd08d6991953, type: 3}
-  parentOfFXObj: {fileID: 1466638406}
+  parentOfFXObj: {fileID: 0}
   pointsPerKill: 50
   pointsPerHit: 10
   hp: 3
@@ -3563,25 +3563,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 0b4c5917def15fa43b0b44f4f7cf1aab, type: 3}
   m_PrefabInstance: {fileID: 844330408}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &851523520 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3135018565024691895, guid: 9d53bd75ab97b294b93ba7fa8a66f205, type: 3}
-  m_PrefabInstance: {fileID: 3135173049689103477}
-  m_PrefabAsset: {fileID: 0}
---- !u!64 &851523525
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 851523520}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 4300000, guid: 070a3a60299b4124b95896f4986b5c4d, type: 3}
 --- !u!1 &854399898 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1238095480485456, guid: bf374732b0ea2c34daa340dc2de7f746, type: 3}
@@ -3605,7 +3586,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathFX: {fileID: 6558697423143517893, guid: fcf4768ec03b2764fa3ccd08d6991953, type: 3}
-  parentOfFXObj: {fileID: 1466638406}
+  parentOfFXObj: {fileID: 0}
   pointsPerKill: 50
   pointsPerHit: 10
   hp: 3
@@ -3804,7 +3785,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathFX: {fileID: 6558697423143517893, guid: fcf4768ec03b2764fa3ccd08d6991953, type: 3}
-  parentOfFXObj: {fileID: 1466638406}
+  parentOfFXObj: {fileID: 0}
   pointsPerKill: 50
   pointsPerHit: 10
   hp: 3
@@ -3974,7 +3955,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathFX: {fileID: 6558697423143517893, guid: fcf4768ec03b2764fa3ccd08d6991953, type: 3}
-  parentOfFXObj: {fileID: 1466638406}
+  parentOfFXObj: {fileID: 0}
   pointsPerKill: 50
   pointsPerHit: 10
   hp: 3
@@ -4628,7 +4609,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathFX: {fileID: 6558697423143517893, guid: fcf4768ec03b2764fa3ccd08d6991953, type: 3}
-  parentOfFXObj: {fileID: 1466638406}
+  parentOfFXObj: {fileID: 0}
   pointsPerKill: 50
   pointsPerHit: 10
   hp: 3
@@ -4729,7 +4710,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathFX: {fileID: 6558697423143517893, guid: fcf4768ec03b2764fa3ccd08d6991953, type: 3}
-  parentOfFXObj: {fileID: 1466638406}
+  parentOfFXObj: {fileID: 0}
   pointsPerKill: 50
   pointsPerHit: 10
   hp: 3
@@ -4830,7 +4811,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathFX: {fileID: 6558697423143517893, guid: fcf4768ec03b2764fa3ccd08d6991953, type: 3}
-  parentOfFXObj: {fileID: 1466638406}
+  parentOfFXObj: {fileID: 0}
   pointsPerKill: 50
   pointsPerHit: 10
   hp: 3
@@ -5365,7 +5346,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathFX: {fileID: 6558697423143517893, guid: fcf4768ec03b2764fa3ccd08d6991953, type: 3}
-  parentOfFXObj: {fileID: 1466638406}
+  parentOfFXObj: {fileID: 0}
   pointsPerKill: 50
   pointsPerHit: 10
   hp: 3
@@ -5706,11 +5687,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 7197605669595603073, guid: c353f4214dbb2c642bfba4dd372898eb, type: 3}
   m_PrefabInstance: {fileID: 1272366065}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1288841671 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1383050216, guid: a027f88a1d973e749aa31e700297e256, type: 3}
-  m_PrefabInstance: {fileID: 2278095408121526836}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1302887979
 PrefabInstance:
@@ -6297,7 +6273,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathFX: {fileID: 6558697423143517893, guid: fcf4768ec03b2764fa3ccd08d6991953, type: 3}
-  parentOfFXObj: {fileID: 1466638406}
+  parentOfFXObj: {fileID: 0}
   pointsPerKill: 50
   pointsPerHit: 10
   hp: 3
@@ -6694,111 +6670,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathFX: {fileID: 6558697423143517893, guid: fcf4768ec03b2764fa3ccd08d6991953, type: 3}
-  parentOfFXObj: {fileID: 1466638406}
+  parentOfFXObj: {fileID: 0}
   pointsPerKill: 50
   pointsPerHit: 10
   hp: 3
---- !u!1 &1473437934 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2278095408686037500, guid: a027f88a1d973e749aa31e700297e256, type: 3}
-  m_PrefabInstance: {fileID: 2278095408121526836}
-  m_PrefabAsset: {fileID: 0}
---- !u!82 &1473437938
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1473437934}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 13a3c50c9a7c4b442b321cbc01d14de1, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 0.146
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
 --- !u!1001 &1487343782
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8466,7 +8341,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathFX: {fileID: 6558697423143517893, guid: fcf4768ec03b2764fa3ccd08d6991953, type: 3}
-  parentOfFXObj: {fileID: 1466638406}
+  parentOfFXObj: {fileID: 0}
   pointsPerKill: 50
   pointsPerHit: 10
   hp: 3
@@ -10487,17 +10362,9 @@ PrefabInstance:
       propertyPath: circuit
       value: 
       objectReference: {fileID: 983173656}
-    - target: {fileID: 1060220158, guid: a027f88a1d973e749aa31e700297e256, type: 3}
-      propertyPath: lookAheadForTargetOffset
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1733327774, guid: a027f88a1d973e749aa31e700297e256, type: 3}
-      propertyPath: m_Convex
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1733327774, guid: a027f88a1d973e749aa31e700297e256, type: 3}
-      propertyPath: m_IsTrigger
-      value: 1
+    - target: {fileID: 1476218428, guid: a027f88a1d973e749aa31e700297e256, type: 3}
+      propertyPath: m_Volume
+      value: 0.07
       objectReference: {fileID: 0}
     - target: {fileID: 2278095407707920192, guid: a027f88a1d973e749aa31e700297e256, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10547,42 +10414,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Rig
       objectReference: {fileID: 0}
-    - target: {fileID: 2278095408686037503, guid: a027f88a1d973e749aa31e700297e256, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -1.223
-      objectReference: {fileID: 0}
-    - target: {fileID: 2278095408686037503, guid: a027f88a1d973e749aa31e700297e256, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 2.505
-      objectReference: {fileID: 0}
-    - target: {fileID: 2278095408686037503, guid: a027f88a1d973e749aa31e700297e256, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.169
-      objectReference: {fileID: 0}
-    - target: {fileID: 3363860443291649966, guid: a027f88a1d973e749aa31e700297e256, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 1.29
-      objectReference: {fileID: 0}
-    - target: {fileID: 3363860443291649966, guid: a027f88a1d973e749aa31e700297e256, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 2.29
-      objectReference: {fileID: 0}
-    - target: {fileID: 3363860443291649966, guid: a027f88a1d973e749aa31e700297e256, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.24
-      objectReference: {fileID: 0}
-    - target: {fileID: 4778476089042733846, guid: a027f88a1d973e749aa31e700297e256, type: 3}
-      propertyPath: deathGibs
-      value: 
-      objectReference: {fileID: 6673424392956739888, guid: b2aec135034fbc3449b8018df30a485b, type: 3}
-    - target: {fileID: 4778476089042733846, guid: a027f88a1d973e749aa31e700297e256, type: 3}
-      propertyPath: levelLoadDelay
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4778476089042733846, guid: a027f88a1d973e749aa31e700297e256, type: 3}
-      propertyPath: jetParticles
-      value: 
-      objectReference: {fileID: 1288841671}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a027f88a1d973e749aa31e700297e256, type: 3}
 --- !u!1001 &3135173049689103477
