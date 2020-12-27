@@ -7,29 +7,28 @@ using UnityStandardAssets.CrossPlatformInput;
 public class PlayerController : MonoBehaviour
 {   
     [Header("General")]
-    [Tooltip("In ms^-1")] [SerializeField] float xSpeed = 6f;
-    [Tooltip("In ms^-1")] [SerializeField] float ySpeed = 6f;
-    [Tooltip("In metres")] [SerializeField] float xDispMax = 5f;
-    [Tooltip("In metres")] [SerializeField] float yDispMax = 4f;
+    [Tooltip("In ms^-1")] [SerializeField] private float xSpeed = 6f;
+    [Tooltip("In ms^-1")] [SerializeField] private float ySpeed = 6f;
+    [Tooltip("In metres")] [SerializeField] private float xDispMax = 5f;
+    [Tooltip("In metres")] [SerializeField] private float yDispMax = 4f;
     [SerializeField] private GameObject[] guns;
 
     [Header("Screen Position Params")]
-    [SerializeField] float positionPitchFactor = -5f;
-    [SerializeField] float positionYawFactor = 5f;
+    [SerializeField] private float positionPitchFactor = -5f;
+    [SerializeField] private float positionYawFactor = 5f;
 
     [Header("Control-Throw Params")]
-    [SerializeField] float controlPitchFactor = -5f;
-    [SerializeField] float controlRollFactor = -5f;
+    [SerializeField] private float controlPitchFactor = -5f;
+    [SerializeField] private float controlRollFactor = -5f;
 
-    static float xThrow, yThrow;
-    static bool firing;
+    internal static float xThrow, yThrow;
+    internal static bool firing;
     private List<ParticleSystem> bullets = new List<ParticleSystem>();
-    AudioSource laserSounds;
+    private AudioSource laserSounds;
 
     bool controlsFrozen = false;
 
     // Start is called before the first frame update
-
     void Start()
     {
         CacheGuns();
@@ -37,6 +36,8 @@ public class PlayerController : MonoBehaviour
 
     private void CacheGuns()
     {
+
+        //cache particle systems
         foreach (GameObject gun in guns)
         {
             ParticleSystem bullet = gun.GetComponent<ParticleSystem>();
@@ -114,11 +115,11 @@ public class PlayerController : MonoBehaviour
         }   
         */
         firing = CrossPlatformInputManager.GetButton("Fire");
-        SetGunsActive(firing);
+        SetGunsActiveTo(firing);
     }
 
 
-    private void SetGunsActive(bool firing)
+    private void SetGunsActiveTo(bool firing)
     {
         foreach (ParticleSystem bullet in bullets)
         {
@@ -138,9 +139,9 @@ public class PlayerController : MonoBehaviour
 
     private void OnPlayerDeath()
     {
-        print("Controls Frozen");
+        print("Player died, controls Frozen");
         controlsFrozen = true;
-        SetGunsActive(false);
+        SetGunsActiveTo(false);
     }
 
 }

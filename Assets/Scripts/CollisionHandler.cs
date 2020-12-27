@@ -27,7 +27,7 @@ public class CollisionHandler : MonoBehaviour
         SendMessageUpwards("OnPlayerDeath");
     }
 
-    //boom
+
     /**
      * func: PlayGibs
      * Partial invocation of the visual death sequence.
@@ -52,7 +52,7 @@ public class CollisionHandler : MonoBehaviour
         GameObject gibs = Instantiate(deathGibs, gameObject.transform.position, gameObject.transform.rotation);
         gibs.transform.parent = gameObject.transform;
 
-        //Invoke(nameof(MakeGibsTangible), gibIntangibilityTime);
+        StartCoroutine(MakeGibsTangible());
 
         //apply explosive force to gibs
         Rigidbody[] rigidbodies = gameObject.GetComponentsInChildren<Rigidbody>();
@@ -75,13 +75,23 @@ public class CollisionHandler : MonoBehaviour
 
     }
 
-    private void MakeGibsTangible()
+    private IEnumerator MakeGibsTangible()
     {
         MeshCollider[] gibColliders = deathGibs.GetComponentsInChildren<MeshCollider>();
         foreach(MeshCollider meshCollider in gibColliders)
         {
+            meshCollider.enabled = false;
+        }
+
+        yield return new WaitForSeconds(gibIntangibilityTime);
+
+        foreach (MeshCollider meshCollider in gibColliders)
+        {
             meshCollider.enabled = true;
         }
+
+        yield return null;
+
     }
 
     private void ReloadScene()
