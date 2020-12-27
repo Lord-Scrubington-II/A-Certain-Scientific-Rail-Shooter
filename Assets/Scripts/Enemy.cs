@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour
     void Start()
     {
         thisName = gameObject.name;
-        AddNonTriggerBoxCollider();
+        AddNonTriggerMeshCollider();
         scoreBoard = GameObject.FindObjectOfType<ScoreBoard>();
     }
 
@@ -28,12 +28,12 @@ public class Enemy : MonoBehaviour
     }
 
     /**
-     * func: AddNonTriggerBoxCollider()
-     * Guarantee attachment of a box collider at runtime.
+     * func: AddNonTriggerMeshCollider() 
+     * Guarantee attachment of a mesh collider at runtime.
      */
-    void AddNonTriggerBoxCollider()
+    void AddNonTriggerMeshCollider()
     {
-        Collider boxCollider = gameObject.AddComponent<BoxCollider>();
+        Collider boxCollider = gameObject.AddComponent<MeshCollider>();
         boxCollider.isTrigger = false;
     }
 

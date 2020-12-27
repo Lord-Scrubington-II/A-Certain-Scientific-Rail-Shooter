@@ -45,6 +45,7 @@ public class PlayerController : MonoBehaviour
 
         //cache audiosource of guns
         laserSounds = gameObject.GetComponent<AudioSource>();
+        laserSounds.Stop();
     }
 
     // Update is called once per frame
