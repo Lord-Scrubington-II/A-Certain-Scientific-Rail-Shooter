@@ -140,3 +140,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26cf1d26e27f59d4e84fd6046ae396cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  titleTheme: {fileID: 8300000, guid: 715429d0afe1d0043a61c5ecae43bf6a, type: 3}
+  gameTheme: {fileID: 8300000, guid: ab800d2491076fe45bcefcba00d8d9b7, type: 3}

@@ -3,21 +3,56 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class CollisionHandler : MonoBehaviour
 {
-    [Tooltip("In Seconds")][SerializeField] float levelLoadDelay = 1f;
-    [Tooltip("Explosion Prefab")][SerializeField] GameObject deathFx;
-    [SerializeField] GameObject deathGibs;
-    [SerializeField] GameObject jetParticles;
-    private readonly float gibIntangibilityTime = 0.1f;
+    [Tooltip("In Seconds")] [SerializeField] float levelLoadDelay = 1f;
+    [Tooltip("Jet Particles Prefab")] [SerializeField] GameObject jetParticles;
+    [Tooltip("Explosion Prefab")] [SerializeField] GameObject deathFx;
+    [Tooltip("Gibs Prefab")] [SerializeField] GameObject deathGibs;
+    private readonly float gibIntangibilityTime = 0.3f;
     private readonly float explosionStrength = 10f;
+
+    [SerializeField] private AudioClip hitSound;
+    private AudioSource playerAuS;
+    [SerializeField] private float hitSoundVolume;
+
+    [Range(0f, 3f)] [SerializeField] private float playerIntangibilityTime = 1.5f;
+    private readonly float invincibilityFlashTime = 0.2f;
+    internal static bool isInvincible;
+    private int health;
+    private Slider healthBar;
+    
+
+    private void Start()
+    {
+        healthBar = GameObject.FindObjectOfType<Slider>();
+        playerAuS = gameObject.GetComponent<AudioSource>();
+        health = (int)healthBar.maxValue;
+    }
 
     private void OnTriggerEnter(Collider other)
     {
-        StartDeathSequence();
-        deathFx.SetActive(true);
-        Invoke(nameof(ReloadScene), levelLoadDelay);
+        //if invincible, do nothing
+        if (!isInvincible)
+        {
+            //damage to player
+            health--;
+            healthBar.value--;
+            if (health <= 0)
+            {
+                //death operations
+                deathFx.SetActive(true);
+                Invoke(nameof(ReloadScene), levelLoadDelay);
+                StartDeathSequence();
+            }
+            else
+            {
+                //begin invincibility frames
+                StartCoroutine(playInvincibilityFrames());
+            }
+        }
     }
 
     private void StartDeathSequence()
@@ -25,6 +60,48 @@ public class CollisionHandler : MonoBehaviour
         print("Ship hit a trigger");
         PlayGibs(); //hehe ship go boom
         SendMessageUpwards("OnPlayerDeath");
+    }
+
+
+    /**
+     * func: playInvincibilityFrames (Coroutine)
+     * Plays the invincibility frame sequence over a period specified by
+     * the player's hit-invulnerabilty time. Also signals other components
+     * that the player is in the invulnerable state.
+     */
+    private IEnumerator playInvincibilityFrames()
+    {
+        SendMessage("OnPlayerHit");
+
+        isInvincible = true;
+
+        /**
+         * To play hit sound, inject new audio clip object to the player's audio source,
+         * while preserving the old audio clip as a reference.
+         * This takes advantage of the fact that the player is not able to fire their
+         * guns while invincible, and eliminates the need for multiple audiosources.
+         */
+        AudioClip oldAudioClip = playerAuS.clip;
+        float oldVolume = playerAuS.volume;
+        playerAuS.clip = hitSound;
+        playerAuS.volume = 0.5f;
+        playerAuS.Play();
+
+        //turn on and off the ship's renderable components over time
+        MeshRenderer shipMesh = gameObject.GetComponent<MeshRenderer>();
+        for (float t = 0.0f; t <= playerIntangibilityTime; t += invincibilityFlashTime)
+        {
+            shipMesh.enabled = !shipMesh.enabled;
+            jetParticles.SetActive(!jetParticles.activeInHierarchy);
+            yield return new WaitForSeconds(invincibilityFlashTime);
+        }
+
+        //re-inject original audio clip, end invincibility
+        playerAuS.clip = oldAudioClip;
+        playerAuS.volume = oldVolume;
+        isInvincible = false;
+
+        SendMessage("OnInvincibilityFramesEnd");
     }
 
 
@@ -48,7 +125,7 @@ public class CollisionHandler : MonoBehaviour
         //find rigid body of player ship
         Rigidbody playerRB = gameObject.GetComponent<Rigidbody>();
 
-        //instantiate gibs, parented to the player ship
+        //instantiate gibs, child to the player ship
         GameObject gibs = Instantiate(deathGibs, gameObject.transform.position, gameObject.transform.rotation);
         gibs.transform.parent = gameObject.transform;
 
@@ -68,13 +145,18 @@ public class CollisionHandler : MonoBehaviour
             impulseVector -= playerRB.centerOfMass;
 
             impulseVector *= explosionStrength;
-            rigidbody.velocity += impulseVector;
+            rigidbody.velocity += impulseVector; //boom
 
             findIndex++;
         }
-
     }
 
+    /**
+     * func: MakeGibsTangible (Coroutine)
+     * This prevents gibs from being immediately blown out of 
+     * camera FOV when colliding with surfaces perpendicular to
+     * the player rig's line of sight.
+     */
     private IEnumerator MakeGibsTangible()
     {
         MeshCollider[] gibColliders = deathGibs.GetComponentsInChildren<MeshCollider>();

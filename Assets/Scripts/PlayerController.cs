@@ -34,6 +34,11 @@ public class PlayerController : MonoBehaviour
         CacheGuns();
     }
 
+    /**
+     * func: CacheGuns
+     * Caches the gun fx as instance vars to avoid calling
+     * "GetComponent()" in the Update() function.
+     */
     private void CacheGuns()
     {
 
@@ -61,6 +66,14 @@ public class PlayerController : MonoBehaviour
         
     }
 
+    /**
+     * func: HandleRotation()
+     * 
+     * Rotates the player ship model to respond to translations with
+     * some modicum of avionic realism. Additionally, the ship's yaw
+     * is used to provide the player a larger set of firing angles
+     * to accomodate the large camera FOV.
+     */
     private void HandleRotation()
     {
         float pitch, yaw, roll;
@@ -79,32 +92,54 @@ public class PlayerController : MonoBehaviour
         transform.localRotation = Quaternion.Euler(pitch, yaw, roll);
     }
 
+    /**
+     * func: HandleTransform()
+     * 
+     * Moves the ship across the screen in accordance with signals from
+     * the cross-platform input manager.
+     */
     private void HandleTransform()
     {
         float actualXTransform = CalcXTransform();
         float actualYTransform = CalcYTransform();
 
+        //always handle translation relative to the camera's line of sight
         transform.localPosition = new Vector3(actualXTransform, actualYTransform, transform.localPosition.z);
     }
 
     private float CalcYTransform()
     {
+        //get control throw
         yThrow = CrossPlatformInputManager.GetAxis("Vertical");
+
+        //translate control throw to y-transform with framerate independence
         float yTransformThisFrame = yThrow * ySpeed * Time.deltaTime;
         float rawYTransform = transform.localPosition.y + yTransformThisFrame;
+
+        //stop the player at the edge of the screen
         float actualYTransform = Mathf.Clamp(rawYTransform, -yDispMax, yDispMax);
         return actualYTransform;
     }
 
     private float CalcXTransform()
     {
+        //get control throw
         xThrow = CrossPlatformInputManager.GetAxis("Horizontal");
+
+        //translate control throw to y-transform with framerate independence
         float xTransformThisFrame = xThrow * xSpeed * Time.deltaTime;
         float rawXTransform = transform.localPosition.x + xTransformThisFrame;
+
+        //stop the player at the edge of the screen
         float actualXTransform = Mathf.Clamp(rawXTransform, -xDispMax, xDispMax);
         return actualXTransform;
     }
 
+    /**
+     * func: HandleGuns()
+     * 
+     * Fires the player ship's guns when given instruction from the CPIM.
+     */
     private void HandleGuns()
     {
         /*
@@ -114,11 +149,26 @@ public class PlayerController : MonoBehaviour
             gun.SetActive(firing);
         }   
         */
-        firing = CrossPlatformInputManager.GetButton("Fire");
-        SetGunsActiveTo(firing);
+        if (!CollisionHandler.isInvincible)
+        {
+            firing = CrossPlatformInputManager.GetButton("Fire");
+            SetGunsActiveTo(firing);
+        }
+        else
+        {
+            SetGunsActiveTo(false);
+        }
     }
 
-
+    /**
+     * func: SetGunsActiveTo()
+     * 
+     * The player's laser guns are actually a pair of particle systems that are
+     * controlled via their emission modules. This function toggles them when called
+     * and also plays the firing noises.
+     * 
+     * @param firing: The state of the guns.
+     */
     private void SetGunsActiveTo(bool firing)
     {
         foreach (ParticleSystem bullet in bullets)
@@ -127,6 +177,7 @@ public class PlayerController : MonoBehaviour
             emissionModule.enabled = firing;
         }
 
+        //play firing sounds
         if (firing && !laserSounds.isPlaying)
         {
             laserSounds.Play();
@@ -137,9 +188,22 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    private void OnPlayerHit()
+    {
+        print("Player hit, controls temporarily frozen");
+        controlsFrozen = true;
+        SetGunsActiveTo(false);
+    }
+
+    private void OnInvincibilityFramesEnd()
+    {
+        print("Invincibility frames over. Control resumed");
+        controlsFrozen = false;
+    }
+
     private void OnPlayerDeath()
     {
-        print("Player died, controls Frozen");
+        print("Player died, controls frozen");
         controlsFrozen = true;
         SetGunsActiveTo(false);
     }
