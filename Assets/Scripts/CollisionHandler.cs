@@ -1,5 +1,5 @@
 ﻿//===============================================================================
-//A Certain Scientific Rails Shooter                    Author: @Zane Wang
+//A Certain Scientific Rails Shooter                    @Author: Zane Wang
 //-------------------------------------------------------------------------------
 //File: CollisionHandler.cs 
 //
@@ -18,10 +18,10 @@ using UnityEngine.UI;
 
 public class CollisionHandler : MonoBehaviour
 {
-    [Tooltip("In Seconds")] [SerializeField] float levelLoadDelay = 1f;
-    [Tooltip("Jet Particles Prefab")] [SerializeField] GameObject jetParticles;
-    [Tooltip("Explosion Prefab")] [SerializeField] GameObject deathFx;
-    [Tooltip("Gibs Prefab")] [SerializeField] GameObject deathGibs;
+    [Tooltip("In Seconds")] [SerializeField] private readonly float levelLoadDelay = 1f;
+    [Tooltip("Jet Particles Prefab")] [SerializeField] private GameObject jetParticles;
+    [Tooltip("Explosion Prefab")] [SerializeField] private GameObject deathFx;
+    [Tooltip("Gibs Prefab")] [SerializeField] private GameObject deathGibs;
     private readonly float gibIntangibilityTime = 0.3f;
     private readonly float explosionStrength = 10f;
 
@@ -103,6 +103,8 @@ public class CollisionHandler : MonoBehaviour
         //re-inject original audio clip, end invincibility
         playerAuS.clip = oldAudioClip;
         playerAuS.volume = oldVolume;
+        jetParticles.SetActive(true);
+        shipMesh.enabled = true;
         isInvincible = false;
 
         SendMessage("OnInvincibilityFramesEnd");

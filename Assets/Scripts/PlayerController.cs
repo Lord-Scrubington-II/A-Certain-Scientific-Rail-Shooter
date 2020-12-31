@@ -1,4 +1,14 @@
-﻿using System;
+﻿//===============================================================================
+//A Certain Scientific Rails Shooter                    @Author: Zane Wang
+//-------------------------------------------------------------------------------
+//File: PlayerController.cs 
+//
+//Description: This file contains the implementation of a monobehaviour that is 
+//          attached to the player's ship. This handles the movement of the
+//          player across the screen and this player's weapons.
+//===============================================================================
+
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;

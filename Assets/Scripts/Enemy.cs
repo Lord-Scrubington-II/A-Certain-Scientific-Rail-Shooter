@@ -5,11 +5,11 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     private string thisName;
-    [SerializeField] GameObject deathFX;
-    [SerializeField] Transform parentOfFXObj;
-    [SerializeField] int pointsPerKill = 50;
-    [SerializeField] int pointsPerHit = 5;
-    [SerializeField] int hp = 5;
+    [SerializeField] private GameObject deathFX;
+    [SerializeField] private Transform parentOfFXObj;
+    [SerializeField] private readonly int pointsPerKill = 50;
+    [SerializeField] private readonly int pointsPerHit = 5;
+    [SerializeField] private readonly int hp = 5;
 
     private ScoreBoard scoreBoard;
 
@@ -19,12 +19,6 @@ public class Enemy : MonoBehaviour
         thisName = gameObject.name;
         AddNonTriggerMeshCollider();
         scoreBoard = GameObject.FindObjectOfType<ScoreBoard>();
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     /**
