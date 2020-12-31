@@ -1,4 +1,15 @@
-﻿using System;
+﻿//===============================================================================
+//A Certain Scientific Rails Shooter                    Author: @Zane Wang
+//-------------------------------------------------------------------------------
+//File: CollisionHandler.cs 
+//
+//Description: This file contains the implementation of a monobehaviour that is 
+//          attached to the player's ship. This allows for the detection and 
+//          resolution of collision events between the player's avatar, the
+//          environment, and enemies.
+//===============================================================================
+
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -23,8 +34,8 @@ public class CollisionHandler : MonoBehaviour
     internal static bool isInvincible;
     private int health;
     private Slider healthBar;
-    
 
+    // Start is called before the first frame update
     private void Start()
     {
         healthBar = GameObject.FindObjectOfType<Slider>();
@@ -32,6 +43,7 @@ public class CollisionHandler : MonoBehaviour
         health = (int)healthBar.maxValue;
     }
 
+    //When the player enters a trigger, decrement HP and check for death
     private void OnTriggerEnter(Collider other)
     {
         //if invincible, do nothing
@@ -54,14 +66,6 @@ public class CollisionHandler : MonoBehaviour
             }
         }
     }
-
-    private void StartDeathSequence()
-    {
-        print("Ship hit a trigger");
-        PlayGibs(); //hehe ship go boom
-        SendMessageUpwards("OnPlayerDeath");
-    }
-
 
     /**
      * func: playInvincibilityFrames (Coroutine)
@@ -104,6 +108,16 @@ public class CollisionHandler : MonoBehaviour
         SendMessage("OnInvincibilityFramesEnd");
     }
 
+    /**
+     * func: StartDeathSequence()
+     * Called when the player's HP reaches 0 on a collision event.
+     */
+    private void StartDeathSequence()
+    {
+        print("Ship hit a trigger");
+        PlayGibs(); //hehe ship go boom
+        SendMessageUpwards("OnPlayerDeath");
+    }
 
     /**
      * func: PlayGibs

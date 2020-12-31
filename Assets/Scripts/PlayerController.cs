@@ -7,19 +7,19 @@ using UnityStandardAssets.CrossPlatformInput;
 public class PlayerController : MonoBehaviour
 {   
     [Header("General")]
-    [Tooltip("In ms^-1")] [SerializeField] private float xSpeed = 6f;
-    [Tooltip("In ms^-1")] [SerializeField] private float ySpeed = 6f;
-    [Tooltip("In metres")] [SerializeField] private float xDispMax = 5f;
-    [Tooltip("In metres")] [SerializeField] private float yDispMax = 4f;
+    [Tooltip("In ms^-1")] [SerializeField] private readonly float xSpeed = 6f;
+    [Tooltip("In ms^-1")] [SerializeField] private readonly float ySpeed = 6f;
+    [Tooltip("In metres")] [SerializeField] private readonly float xDispMax = 5f;
+    [Tooltip("In metres")] [SerializeField] private readonly float yDispMax = 4f;
     [SerializeField] private GameObject[] guns;
 
     [Header("Screen Position Params")]
-    [SerializeField] private float positionPitchFactor = -5f;
-    [SerializeField] private float positionYawFactor = 5f;
+    [SerializeField] private readonly float positionPitchFactor = -5f;
+    [SerializeField] private readonly float positionYawFactor = 5f;
 
     [Header("Control-Throw Params")]
-    [SerializeField] private float controlPitchFactor = -5f;
-    [SerializeField] private float controlRollFactor = -5f;
+    [SerializeField] private readonly float controlPitchFactor = -5f;
+    [SerializeField] private readonly float controlRollFactor = -5f;
 
     internal static float xThrow, yThrow;
     internal static bool firing;
