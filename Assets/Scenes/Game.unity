@@ -640,36 +640,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b436d069d11415d1100ab9b44295342, type: 3}
---- !u!1 &276565666
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 276565667}
-  m_Layer: 0
-  m_Name: Gun Array (Missing Prefab)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &276565667
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 276565666}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1154989978}
-  m_RootOrder: 12
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &283264908
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -837,7 +807,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 2e73f820481b99749bdba40eab56bc21, type: 3}
---- !u!1 &311552143
+--- !u!1 &319072090
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -845,7 +815,7 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 311552144}
+  - component: {fileID: 319072091}
   m_Layer: 0
   m_Name: Gun Array (Missing Prefab)
   m_TagString: Untagged
@@ -853,13 +823,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &311552144
+--- !u!4 &319072091
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 311552143}
+  m_GameObject: {fileID: 319072090}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -1113,7 +1083,6 @@ GameObject:
   - component: {fileID: 1326574934}
   - component: {fileID: 411265339}
   - component: {fileID: 411265338}
-  - component: {fileID: 411265337}
   m_Layer: 0
   m_Name: Heavy Cruiser
   m_TagString: Untagged
@@ -1121,21 +1090,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &411265337
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 411265336}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdaa9bb6dd2d12a469d5a83b3359f111, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathFX: {fileID: 6558697423143517893, guid: fcf4768ec03b2764fa3ccd08d6991953, type: 3}
-  parentOfFXObj: {fileID: 1466638406}
-  hp: 3
 --- !u!23 &411265338
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1271,7 +1225,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4990607877152018, guid: 2539fb911e3cc2d4981c307382b80ca2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.816752
+      value: -4.1365943
       objectReference: {fileID: 0}
     - target: {fileID: 4990607877152018, guid: 2539fb911e3cc2d4981c307382b80ca2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -1279,7 +1233,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4990607877152018, guid: 2539fb911e3cc2d4981c307382b80ca2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 1.8865603
+      value: 6.610647
       objectReference: {fileID: 0}
     - target: {fileID: 4990607877152018, guid: 2539fb911e3cc2d4981c307382b80ca2, type: 3}
       propertyPath: m_LocalRotation.x
@@ -1313,10 +1267,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -169.262
       objectReference: {fileID: 0}
-    - target: {fileID: 5455673754497636091, guid: 2539fb911e3cc2d4981c307382b80ca2, type: 3}
-      propertyPath: parentOfFXObj
-      value: 
-      objectReference: {fileID: 1466638406}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2539fb911e3cc2d4981c307382b80ca2, type: 3}
 --- !u!4 &435080192 stripped
@@ -1734,36 +1684,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 103061315045575312, guid: dbef0551e4f29d44aa754550e516950c, type: 3}
   m_PrefabInstance: {fileID: 475314450}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &481028049
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 481028050}
-  m_Layer: 0
-  m_Name: Gun Array Small (Missing Prefab)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &481028050
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 481028049}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1154989978}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &488739258
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2154,6 +2074,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a17cffd9181d6549bc6e5c22e9c5354, type: 3}
+--- !u!1 &539974590
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 539974591}
+  m_Layer: 0
+  m_Name: Gun Array (1) (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &539974591
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 539974590}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1154989978}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &542375107
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4087,7 +4037,6 @@ GameObject:
   - component: {fileID: 865438196}
   - component: {fileID: 925189892}
   - component: {fileID: 925189891}
-  - component: {fileID: 925189890}
   m_Layer: 0
   m_Name: Heavy Cruiser (1)
   m_TagString: Untagged
@@ -4095,21 +4044,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &925189890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 925189889}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdaa9bb6dd2d12a469d5a83b3359f111, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathFX: {fileID: 6558697423143517893, guid: fcf4768ec03b2764fa3ccd08d6991953, type: 3}
-  parentOfFXObj: {fileID: 1466638406}
-  hp: 3
 --- !u!23 &925189891
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4515,6 +4449,36 @@ PlayableDirector:
     value: {fileID: 1007495346}
   m_ExposedReferences:
     m_References: []
+--- !u!1 &1009634013
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1009634014}
+  m_Layer: 0
+  m_Name: Gun Array (1) (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1009634014
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1009634013}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1154989978}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1020263859
 GameObject:
   m_ObjectHideFlags: 0
@@ -5229,7 +5193,6 @@ GameObject:
   - component: {fileID: 1629064536}
   - component: {fileID: 1112461934}
   - component: {fileID: 1112461933}
-  - component: {fileID: 1112461932}
   m_Layer: 0
   m_Name: Assault Gunner (1)
   m_TagString: Untagged
@@ -5237,21 +5200,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1112461932
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1112461931}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdaa9bb6dd2d12a469d5a83b3359f111, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathFX: {fileID: 6558697423143517893, guid: fcf4768ec03b2764fa3ccd08d6991953, type: 3}
-  parentOfFXObj: {fileID: 1466638406}
-  hp: 2
 --- !u!23 &1112461933
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5423,22 +5371,52 @@ Transform:
   m_Children:
   - {fileID: 1291900501}
   - {fileID: 1632554537}
-  - {fileID: 311552144}
-  - {fileID: 2116489364}
+  - {fileID: 319072091}
+  - {fileID: 1009634014}
   - {fileID: 1061966044}
-  - {fileID: 481028050}
+  - {fileID: 1676128582}
   - {fileID: 1978537839}
   - {fileID: 2102687290}
   - {fileID: 237163000}
   - {fileID: 507636943}
   - {fileID: 1895279761}
   - {fileID: 440687303}
-  - {fileID: 276565667}
-  - {fileID: 2000788365}
+  - {fileID: 1512043390}
+  - {fileID: 539974591}
   - {fileID: 734852556}
-  - {fileID: 2046083668}
+  - {fileID: 1173716954}
   m_Father: {fileID: 441786228}
   m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1173716953
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1173716954}
+  m_Layer: 0
+  m_Name: Gun Array Smaller (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1173716954
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1173716953}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1154989978}
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1175001571
 PrefabInstance:
@@ -6756,7 +6734,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4990607877152018, guid: 2539fb911e3cc2d4981c307382b80ca2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.12
+      value: -6.8333464
       objectReference: {fileID: 0}
     - target: {fileID: 4990607877152018, guid: 2539fb911e3cc2d4981c307382b80ca2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6764,7 +6742,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4990607877152018, guid: 2539fb911e3cc2d4981c307382b80ca2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.58
+      value: -4.855913
       objectReference: {fileID: 0}
     - target: {fileID: 4990607877152018, guid: 2539fb911e3cc2d4981c307382b80ca2, type: 3}
       propertyPath: m_LocalRotation.x
@@ -6798,10 +6776,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -169.262
       objectReference: {fileID: 0}
-    - target: {fileID: 5455673754497636091, guid: 2539fb911e3cc2d4981c307382b80ca2, type: 3}
-      propertyPath: parentOfFXObj
-      value: 
-      objectReference: {fileID: 1466638406}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2539fb911e3cc2d4981c307382b80ca2, type: 3}
 --- !u!4 &1350348383 stripped
@@ -6820,7 +6794,6 @@ GameObject:
   - component: {fileID: 704498969}
   - component: {fileID: 1356321119}
   - component: {fileID: 1356321118}
-  - component: {fileID: 1356321117}
   m_Layer: 0
   m_Name: Assault Gunner (2)
   m_TagString: Untagged
@@ -6828,21 +6801,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1356321117
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1356321116}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdaa9bb6dd2d12a469d5a83b3359f111, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathFX: {fileID: 6558697423143517893, guid: fcf4768ec03b2764fa3ccd08d6991953, type: 3}
-  parentOfFXObj: {fileID: 1466638406}
-  hp: 2
 --- !u!23 &1356321118
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7621,7 +7579,6 @@ GameObject:
   - component: {fileID: 2140914346}
   - component: {fileID: 1466158476}
   - component: {fileID: 1466158475}
-  - component: {fileID: 1466158474}
   m_Layer: 0
   m_Name: Heavy Cruiser (2)
   m_TagString: Untagged
@@ -7629,21 +7586,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1466158474
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1466158473}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdaa9bb6dd2d12a469d5a83b3359f111, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathFX: {fileID: 6558697423143517893, guid: fcf4768ec03b2764fa3ccd08d6991953, type: 3}
-  parentOfFXObj: {fileID: 1466638406}
-  hp: 3
 --- !u!23 &1466158475
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7734,7 +7676,6 @@ GameObject:
   - component: {fileID: 1230547359}
   - component: {fileID: 1467487552}
   - component: {fileID: 1467487551}
-  - component: {fileID: 1467487550}
   m_Layer: 0
   m_Name: Assault Gunner
   m_TagString: Untagged
@@ -7742,21 +7683,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1467487550
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1467487549}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdaa9bb6dd2d12a469d5a83b3359f111, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathFX: {fileID: 6558697423143517893, guid: fcf4768ec03b2764fa3ccd08d6991953, type: 3}
-  parentOfFXObj: {fileID: 1466638406}
-  hp: 2
 --- !u!23 &1467487551
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8143,6 +8069,36 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: 2c694c40453654c4dbc22ed9db0b3729, type: 3}
+--- !u!1 &1512043389
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1512043390}
+  m_Layer: 0
+  m_Name: Gun Array (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1512043390
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1512043389}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1154989978}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1514693661 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: b2f2e96fef4a89340ae20580c0fb7739, type: 3}
@@ -8745,7 +8701,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4990607877152018, guid: 2539fb911e3cc2d4981c307382b80ca2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.7266564
+      value: -13.68
       objectReference: {fileID: 0}
     - target: {fileID: 4990607877152018, guid: 2539fb911e3cc2d4981c307382b80ca2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8753,7 +8709,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4990607877152018, guid: 2539fb911e3cc2d4981c307382b80ca2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -1.4540867
+      value: 3.27
       objectReference: {fileID: 0}
     - target: {fileID: 4990607877152018, guid: 2539fb911e3cc2d4981c307382b80ca2, type: 3}
       propertyPath: m_LocalRotation.x
@@ -8787,10 +8743,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -169.262
       objectReference: {fileID: 0}
-    - target: {fileID: 5455673754497636091, guid: 2539fb911e3cc2d4981c307382b80ca2, type: 3}
-      propertyPath: parentOfFXObj
-      value: 
-      objectReference: {fileID: 1466638406}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2539fb911e3cc2d4981c307382b80ca2, type: 3}
 --- !u!4 &1567738540 stripped
@@ -8960,7 +8912,6 @@ GameObject:
   - component: {fileID: 1277786249}
   - component: {fileID: 1600344167}
   - component: {fileID: 1600344166}
-  - component: {fileID: 1600344165}
   m_Layer: 0
   m_Name: Heavy Cruiser (3)
   m_TagString: Untagged
@@ -8968,21 +8919,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1600344165
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1600344164}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdaa9bb6dd2d12a469d5a83b3359f111, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathFX: {fileID: 6558697423143517893, guid: fcf4768ec03b2764fa3ccd08d6991953, type: 3}
-  parentOfFXObj: {fileID: 1466638406}
-  hp: 3
 --- !u!23 &1600344166
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9170,7 +9106,6 @@ GameObject:
   - component: {fileID: 1053001460}
   - component: {fileID: 1628159597}
   - component: {fileID: 1628159596}
-  - component: {fileID: 1628159595}
   m_Layer: 0
   m_Name: Heavy Cruiser (2)
   m_TagString: Untagged
@@ -9178,21 +9113,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1628159595
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1628159594}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdaa9bb6dd2d12a469d5a83b3359f111, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathFX: {fileID: 6558697423143517893, guid: fcf4768ec03b2764fa3ccd08d6991953, type: 3}
-  parentOfFXObj: {fileID: 1466638406}
-  hp: 3
 --- !u!23 &1628159596
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9341,7 +9261,6 @@ GameObject:
   - component: {fileID: 1109168721}
   - component: {fileID: 1650957984}
   - component: {fileID: 1650957983}
-  - component: {fileID: 1650957982}
   m_Layer: 0
   m_Name: Heavy Cruiser
   m_TagString: Untagged
@@ -9349,21 +9268,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1650957982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1650957981}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdaa9bb6dd2d12a469d5a83b3359f111, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathFX: {fileID: 6558697423143517893, guid: fcf4768ec03b2764fa3ccd08d6991953, type: 3}
-  parentOfFXObj: {fileID: 1466638406}
-  hp: 3
 --- !u!23 &1650957983
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9565,6 +9469,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7197605669595603073, guid: c353f4214dbb2c642bfba4dd372898eb, type: 3}
   m_PrefabInstance: {fileID: 1655160327}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1676128581
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1676128582}
+  m_Layer: 0
+  m_Name: Gun Array Small (Missing Prefab)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1676128582
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1676128581}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1154989978}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1701268906
 GameObject:
   m_ObjectHideFlags: 0
@@ -10426,7 +10360,6 @@ GameObject:
   - component: {fileID: 523117642}
   - component: {fileID: 1924518394}
   - component: {fileID: 1924518393}
-  - component: {fileID: 1924518392}
   m_Layer: 0
   m_Name: Heavy Cruiser (3)
   m_TagString: Untagged
@@ -10434,21 +10367,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1924518392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1924518391}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdaa9bb6dd2d12a469d5a83b3359f111, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathFX: {fileID: 6558697423143517893, guid: fcf4768ec03b2764fa3ccd08d6991953, type: 3}
-  parentOfFXObj: {fileID: 1466638406}
-  hp: 3
 --- !u!23 &1924518393
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10578,7 +10496,6 @@ GameObject:
   - component: {fileID: 223233350}
   - component: {fileID: 1954521396}
   - component: {fileID: 1954521395}
-  - component: {fileID: 1954521394}
   m_Layer: 0
   m_Name: Heavy Cruiser
   m_TagString: Untagged
@@ -10586,21 +10503,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1954521394
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1954521393}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdaa9bb6dd2d12a469d5a83b3359f111, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathFX: {fileID: 6558697423143517893, guid: fcf4768ec03b2764fa3ccd08d6991953, type: 3}
-  parentOfFXObj: {fileID: 1466638406}
-  hp: 3
 --- !u!23 &1954521395
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10762,36 +10664,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1717513742909570159, guid: 1a17cffd9181d6549bc6e5c22e9c5354, type: 3}
   m_PrefabInstance: {fileID: 1200684215}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2000788364
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2000788365}
-  m_Layer: 0
-  m_Name: Gun Array (1) (Missing Prefab)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2000788365
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2000788364}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1154989978}
-  m_RootOrder: 13
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2010274616
 GameObject:
   m_ObjectHideFlags: 0
@@ -11103,36 +10975,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1a17cffd9181d6549bc6e5c22e9c5354, type: 3}
---- !u!1 &2046083667
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2046083668}
-  m_Layer: 0
-  m_Name: Gun Array Smaller (Missing Prefab)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2046083668
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2046083667}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1154989978}
-  m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2049668132
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11493,7 +11335,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4990607877152018, guid: 2539fb911e3cc2d4981c307382b80ca2, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.1
+      value: -13.053347
       objectReference: {fileID: 0}
     - target: {fileID: 4990607877152018, guid: 2539fb911e3cc2d4981c307382b80ca2, type: 3}
       propertyPath: m_LocalPosition.y
@@ -11501,7 +11343,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4990607877152018, guid: 2539fb911e3cc2d4981c307382b80ca2, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.92
+      value: 3.8040867
       objectReference: {fileID: 0}
     - target: {fileID: 4990607877152018, guid: 2539fb911e3cc2d4981c307382b80ca2, type: 3}
       propertyPath: m_LocalRotation.x
@@ -11535,10 +11377,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -169.262
       objectReference: {fileID: 0}
-    - target: {fileID: 5455673754497636091, guid: 2539fb911e3cc2d4981c307382b80ca2, type: 3}
-      propertyPath: parentOfFXObj
-      value: 
-      objectReference: {fileID: 1466638406}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2539fb911e3cc2d4981c307382b80ca2, type: 3}
 --- !u!4 &2056629244 stripped
@@ -11650,7 +11488,6 @@ GameObject:
   - component: {fileID: 554142308}
   - component: {fileID: 2071368146}
   - component: {fileID: 2071368145}
-  - component: {fileID: 2071368144}
   m_Layer: 0
   m_Name: Heavy Cruiser (1)
   m_TagString: Untagged
@@ -11658,21 +11495,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2071368144
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2071368143}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fdaa9bb6dd2d12a469d5a83b3359f111, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  deathFX: {fileID: 6558697423143517893, guid: fcf4768ec03b2764fa3ccd08d6991953, type: 3}
-  parentOfFXObj: {fileID: 1466638406}
-  hp: 3
 --- !u!23 &2071368145
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11785,8 +11607,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2078888325}
-  m_LocalRotation: {x: -0.024881268, y: -0.055721164, z: -0.003386734, w: 0.99813056}
-  m_LocalPosition: {x: 94.471954, y: 36.267868, z: -12.162054}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 86.818214, y: 44.15335, z: 5.989283}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1567738540}
@@ -12251,36 +12073,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7197605669595603073, guid: c353f4214dbb2c642bfba4dd372898eb, type: 3}
   m_PrefabInstance: {fileID: 2113676800}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2116489363
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2116489364}
-  m_Layer: 0
-  m_Name: Gun Array (1) (Missing Prefab)
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2116489364
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2116489363}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1154989978}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2131141414
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12411,13 +12203,13 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4581756293608234863, guid: 39eedfc58934f2347b00a03bd3237ba9, type: 3}
-      propertyPath: gameTheme
-      value: 
-      objectReference: {fileID: 8300000, guid: ab800d2491076fe45bcefcba00d8d9b7, type: 3}
-    - target: {fileID: 4581756293608234863, guid: 39eedfc58934f2347b00a03bd3237ba9, type: 3}
       propertyPath: titleTheme
       value: 
       objectReference: {fileID: 8300000, guid: 715429d0afe1d0043a61c5ecae43bf6a, type: 3}
+    - target: {fileID: 4581756293608234863, guid: 39eedfc58934f2347b00a03bd3237ba9, type: 3}
+      propertyPath: gameTheme
+      value: 
+      objectReference: {fileID: 8300000, guid: ab800d2491076fe45bcefcba00d8d9b7, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 39eedfc58934f2347b00a03bd3237ba9, type: 3}
 --- !u!4 &2140914346
