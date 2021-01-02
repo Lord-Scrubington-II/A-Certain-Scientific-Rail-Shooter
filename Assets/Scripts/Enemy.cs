@@ -5,19 +5,11 @@ using UnityEngine;
 public class Enemy : MonoBehaviour
 {
     private string thisName;
-<<<<<<< Updated upstream
     [SerializeField] GameObject deathFX;
     [SerializeField] Transform parentOfFXObj;
     [SerializeField] int pointsPerKill = 50;
     [SerializeField] int pointsPerHit = 5;
     [SerializeField] int hp = 5;
-=======
-    [SerializeField] private GameObject deathFX;
-    [SerializeField] private Transform parentOfFXObj;
-    [SerializeField] private readonly int pointsPerKill = 50;
-    [SerializeField] private readonly int pointsPerHit = 5;
-    [SerializeField] private int hp = 5;
->>>>>>> Stashed changes
 
     private ScoreBoard scoreBoard;
 
