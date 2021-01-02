@@ -7,21 +7,7 @@ using UnityStandardAssets.CrossPlatformInput;
 public class PlayerController : MonoBehaviour
 {   
     [Header("General")]
-<<<<<<< Updated upstream
-    [Tooltip("In ms^-1")] [SerializeField] float xSpeed = 6f;
-    [Tooltip("In ms^-1")] [SerializeField] float ySpeed = 6f;
-    [Tooltip("In metres")] [SerializeField] float xDispMax = 5f;
-    [Tooltip("In metres")] [SerializeField] float yDispMax = 4f;
-    [SerializeField] private GameObject[] guns;
 
-    [Header("Screen Position Params")]
-    [SerializeField] float positionPitchFactor = -5f;
-    [SerializeField] float positionYawFactor = 5f;
-
-    [Header("Control-Throw Params")]
-    [SerializeField] float controlPitchFactor = -5f;
-    [SerializeField] float controlRollFactor = -5f;
-=======
     [Tooltip("In ms^-1")] [SerializeField] private float xSpeed = 6f;
     [Tooltip("In ms^-1")] [SerializeField] private float ySpeed = 6f;
     [Tooltip("In metres")] [SerializeField] private float xDispMax = 5f;
@@ -35,7 +21,7 @@ public class PlayerController : MonoBehaviour
     [Header("Control-Throw Params")]
     [SerializeField] private float controlPitchFactor = -5f;
     [SerializeField] private float controlRollFactor = -5f;
->>>>>>> Stashed changes
+
 
     static float xThrow, yThrow;
     static bool firing;

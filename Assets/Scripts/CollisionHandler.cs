@@ -6,19 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class CollisionHandler : MonoBehaviour
 {
-<<<<<<< Updated upstream
-    [Tooltip("In Seconds")][SerializeField] float levelLoadDelay = 1f;
-    [Tooltip("Explosion Prefab")][SerializeField] GameObject deathFx;
-    [SerializeField] GameObject deathGibs;
-    [SerializeField] GameObject jetParticles;
-    private readonly float gibIntangibilityTime = 0.1f;
-=======
+
     [Tooltip("In Seconds")] [SerializeField] private float levelLoadDelay = 1f;
     [Tooltip("Jet Particles Prefab")] [SerializeField] private GameObject jetParticles;
     [Tooltip("Explosion Prefab")] [SerializeField] private GameObject deathFx;
     [Tooltip("Gibs Prefab")] [SerializeField] private GameObject deathGibs;
     private readonly float gibIntangibilityTime = 0.3f;
->>>>>>> Stashed changes
     private readonly float explosionStrength = 10f;
 
     private void OnTriggerEnter(Collider other)
