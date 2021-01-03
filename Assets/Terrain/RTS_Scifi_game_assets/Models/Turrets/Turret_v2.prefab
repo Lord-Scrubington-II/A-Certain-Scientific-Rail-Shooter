@@ -174,7 +174,7 @@ GameObject:
   - component: {fileID: 1717513742909570159}
   - component: {fileID: 1608270739367127013}
   m_Layer: 0
-  m_Name: Turret_v1 1
+  m_Name: Turret_v2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -202,7 +202,7 @@ Animation:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1718244043723876221}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 3
   m_Animation: {fileID: 7400000, guid: 88ffc3f321dcdde4f8b6399a553d2074, type: 3}
   m_Animations:

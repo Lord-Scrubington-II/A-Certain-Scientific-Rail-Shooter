@@ -8,8 +8,8 @@ public class Enemy : MonoBehaviour
 
     [SerializeField] private GameObject deathFX;
     [SerializeField] private Transform parentOfFXObj;
-    [SerializeField] private readonly int pointsPerKill = 50;
-    [SerializeField] private readonly int pointsPerHit = 5;
+    [SerializeField] private int pointsPerKill = 50;
+    [SerializeField] private int pointsPerHit = 5;
     [SerializeField] private int hp = 5;
 
 

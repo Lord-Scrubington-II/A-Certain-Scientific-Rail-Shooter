@@ -98,6 +98,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deathFX: {fileID: 6558697423143517893, guid: fcf4768ec03b2764fa3ccd08d6991953, type: 3}
   parentOfFXObj: {fileID: 8014581425252491228, guid: 392c14509556a174fbce0534f6f6ff0c, type: 3}
+  pointsPerKill: 80
+  pointsPerHit: 5
   hp: 3
 --- !u!1001 &1032427199715186695
 PrefabInstance:
